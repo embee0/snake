@@ -1,4 +1,4 @@
-# 3. Refactoring des Snake-Spiels von
+# Drittes Refactoring des Snake-Spiels von
 # https://github.com/Carla-Codes/simple-snake-game-python/blob/main/snake.py
 
 # Anpassungen:
