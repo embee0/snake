@@ -15,6 +15,10 @@ class SnakeUI(ABC):
         ...
 
     @abstractmethod
+    def refresh_and_get_command(self) -> Command:
+        ...
+
+    @abstractmethod
     def game_aborted(self) -> bool:
         ...
 
