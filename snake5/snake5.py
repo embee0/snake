@@ -23,14 +23,14 @@ from curses_TUI import TextUI
 from pygame_GUI import PygameUI
 
 
-#### GAME LOOP = CONTROL #############################################
+#### GAME LOOP = CONTROLLER #############################################
 def play_game(world: SnakeWorld, ui: SnakeUI) -> int:
     game_running = True
     while game_running:
         ui.draw(world)
         new_timeout = world.compute_timeout()
         ui.timeout(new_timeout)
-        command = ui.refresh_and_get_command()
+        command = ui.get_command()
         if ui.game_aborted():
             break
         game_running = world.update(command)

@@ -17,6 +17,12 @@ class SnakeUI(ABC):
         pass
 
     @abstractmethod
+    def timeout(self, new_timeout: int) -> None:
+        """Setzt die Zeit in Millisekunden, die zwischen zwei Aktualisierungen
+        der Snake-Welt vergehen soll."""
+        pass
+
+    @abstractmethod
     def get_command(self) -> Command:
         """Holt aus der UI die nächste Benutzereingabe
         (je nach UI: Tastendruck, Mausklick, Bewegungssensor, ...)"""

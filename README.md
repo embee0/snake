@@ -14,6 +14,9 @@ Um zu testen, ob das geklappt hat, kannst du die Originalversion des Spiels in d
 
 `conda install -c conda-forge pygame`  oder `pip install pygame`
 
+## Kivy
+`conda install kivy -c conda-forge`
+
 ## Ziel
 Verbessere das Spiel weiter, so dass es schick wird wie [diese Version](https://g.co/kgs/YATqFtm) oder [diese](https://snake.io/) ;-)
 
