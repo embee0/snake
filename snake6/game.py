@@ -10,7 +10,7 @@ class SnakeGame:
         self.ui = ui
 
     def play(self) -> int:
-        while not self.world.game_over:
+        while not self.world.is_game_over():
             self.ui.draw(self.world)
             new_timeout = self.world.compute_timeout()
             self.ui.timeout(new_timeout)

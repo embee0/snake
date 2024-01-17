@@ -14,7 +14,10 @@ class World(SnakeWorld):
         self.snake: list = [[8, 5], [7, 5], [6, 5]]
         self.food: list[int] = [25, 10]
         self.last_command: Command = Command.RIGHT
-        self.game_over = False
+        self.game_over: bool = False
+
+    def is_game_over(self) -> bool:
+        return self.game_over
 
     def snake_eats_food(self) -> bool:
         return self.snake[0] == self.food

@@ -75,9 +75,25 @@ def main(cmd_line_arg: str) -> None:
     print("\nScore: " + str(score))
 
 
+def gui_interaktiv_auswaehlen(possible_args):
+    print("Mögliche GUIs: ")
+    for i, arg in enumerate(possible_args):
+        print(i + 1, arg)
+    while True:
+        try:
+            auswahl = int(input("Bitte Nummer eingeben: ")) - 1
+            if auswahl in range(len(possible_args)):
+                break
+        except ValueError:
+            pass
+        print("Ungültige Eingabe")
+    return possible_args[auswahl]
+
+
 if __name__ == "__main__":
     POSSIBLE_COMMAND_LINE_ARGS = ["text", "pygame", "kivy"]
     cmd_line_arg = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd_line_arg not in POSSIBLE_COMMAND_LINE_ARGS:
-        show_usage()
+        # show_usage()
+        cmd_line_arg = gui_interaktiv_auswaehlen(POSSIBLE_COMMAND_LINE_ARGS)
     main(cmd_line_arg)

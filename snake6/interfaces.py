@@ -8,6 +8,14 @@ class SnakeWorld(ABC):
     def update(self, command: Command) -> bool:
         pass
 
+    @abstractmethod
+    def compute_timeout(self) -> int:
+        pass
+
+    @abstractmethod
+    def is_game_over(self) -> bool:
+        pass
+
 
 class SnakeUI(ABC):
     @abstractmethod

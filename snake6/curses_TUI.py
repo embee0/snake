@@ -21,7 +21,6 @@ class TextUI(SnakeUI):
 
     def init_curses(self, world: SnakeWorld) -> curses.window:
         curses.initscr()  # initialize
-        print(f"Curses wird initialisiert mit {world.width}x{world.height}")
         window = curses.newwin(world.height, world.width, 0, 0)
         window.keypad(True)  # enable keypad
         curses.noecho()  # turn off automatic echoing of keys to the screen
