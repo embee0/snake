@@ -130,6 +130,11 @@ class SnakeApp(App):
     def update(self, dt):
         self.root.update(dt)
 
+    def on_stop(self):
+        # print("SnakeApp stoppt")
+        self.world.last_command = Command.EXIT
+        self.world.game_over = True
+
 
 # Klasse orientiert sich an TextUI, aber mit pygame statt curses
 class KivyUI(SnakeUI):
@@ -147,7 +152,7 @@ class KivyUI(SnakeUI):
 
         self.app = SnakeApp(world)
         self.app.run()
-        print("KivyUI stoppt")
+        # print("KivyUI stoppt")
 
     def draw(self, world: SnakeWorld) -> None:
         pass

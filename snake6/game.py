@@ -16,6 +16,7 @@ class SnakeGame:
             self.ui.timeout(new_timeout)
             command = self.ui.get_command()
             if self.ui.game_aborted():
+                print("Spiel abgebrochen")
                 break
             self.game_running = self.world.update(command)
         self.ui.close()
